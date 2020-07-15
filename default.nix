@@ -7,4 +7,5 @@ self: super: rec {
 	liquidctl = super.callPackage ./pkgs/system-management/liquidctl {};
 	looking-glass = super.callPackage ./pkgs/looking-glass-client {};
 	betterdiscordctl = super.callPackage ./pkgs/net-im/betterdiscordctl {};
+	legendary = super.callPackage ./pkgs/legendary {};
 }
