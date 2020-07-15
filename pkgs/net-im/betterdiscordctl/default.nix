@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
     owner = "bb010g";
     repo = pname;
     rev = "785ad01257d2bfb0a194e618d1a86385f3b9eec8";
-    sha256 = "0hfqa7qppzvbb66jjqwpw6p18hkxjh20fld8nznrpjd8xrajz8kv";
+    sha256 = "0qpmm5l8jhm7k0kqblc0bnr9fl4b6z8iddhjar03bb4kqgr962fa";
   };
 
   pathAdd = stdenv.lib.makeSearchPath "/bin" [ git nodejs nodePackages.asar ];
