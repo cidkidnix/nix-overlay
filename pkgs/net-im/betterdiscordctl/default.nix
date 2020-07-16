@@ -25,7 +25,7 @@ stdenv.mkDerivation rec {
     description = "A utility for managing BetterDiscord on Linux";
     homepage = https://github.com/bb010g/betterdiscordctl;
     license = licenses.mit;
-    maintainers = with maintainers; [ tadeokondrak ];
+    maintainers = with maintainers; [ tadeokondrak cidkid ];
     platforms = platforms.linux;
   };
 }
