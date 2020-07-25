@@ -41,8 +41,8 @@ in
 	};
 	};
 	environment.systemPackages = [ cfg.package ];
+	boot.kernelModules = [ "uinput" ];
 	services.udev.extraRules = ''
-
 		KERNEL=="uinput", GROUP="users",MODE="0666"
 		# Wacom CTL-4100 Bluetooth
 		SUBSYSTEM=="hidraw", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0377", MODE="0666"
