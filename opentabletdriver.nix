@@ -29,7 +29,11 @@ in
    config = mkIf cfg.enable {
 	systemd.user = {
 	  services.opentabletdriver ={
+<<<<<<< HEAD
 	     wantedBy = [ "default.target" ];
+=======
+	     restartIfChanged = true;
+>>>>>>> parent of 9571eb6... update opentabletdriver.nix
 	     serviceConfig = {
 		Type = "simple";
 		ExecStart = ''
