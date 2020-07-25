@@ -43,7 +43,7 @@ in
 	environment.systemPackages = [ cfg.package ];
 	boot.kernelModules = [ "uinput" ];
 	services.udev.extraRules = ''
-		KERNEL=="uinput", GROUP="users",MODE="0666"
+		KERNEL=="uinput", GROUP="users",MODE="0660"
 		# Wacom CTL-4100 Bluetooth
 		SUBSYSTEM=="hidraw", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0377", MODE="0666"
 		SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0377", ENV{LIBINPUT_IGNORE_DEVICE}="1"
