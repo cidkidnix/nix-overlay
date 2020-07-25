@@ -7,7 +7,7 @@ add
 ```nix
 { config, lib, pkgs, ... }:
 let
-    rev-overlay = "master"
+    rev-overlay = "master";
     url-overlay = "https://github.com/cidkidnix/nix-overlay/archive/${rev-overlay}.tar.gz";
     nix-overlay = (import (builtins.fetchTarball url-overlay));
 in
