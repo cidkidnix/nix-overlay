@@ -30,6 +30,7 @@ in
 	systemd.user = {
 	  services.opentabletdriver ={
 	     restartIfChanged = true;
+	     wantedBy = [ "default.target" ];
 	     serviceConfig = {
 		Type = "simple";
 		ExecStart = ''
