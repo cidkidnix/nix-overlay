@@ -8,5 +8,4 @@ self: super: rec {
 	looking-glass = super.callPackage ./pkgs/looking-glass-client {};
 	betterdiscordctl = super.callPackage ./pkgs/net-im/betterdiscordctl {};
 	legendary = super.callPackage ./pkgs/legendary {};
-	opentabletdriver = super.callPackage ./pkgs/opentabletdriver {};
 }
