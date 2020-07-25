@@ -86,6 +86,8 @@ stdenv.mkDerivation rec {
   '';
 
   installPhase = ''
+    mkdir -p $out/OpenTabletDriver/
+    cp -r ./TabletDriverLib/Configurations/ $out/lib/OpenTabletDriver/
     for project in OpenTabletDriver.{Console,Daemon,UX.Gtk}; do
       dotnet publish $project \
           --no-build \
