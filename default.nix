@@ -9,4 +9,5 @@ self: super: rec {
 	betterdiscordctl = super.callPackage ./pkgs/net-im/betterdiscordctl {};
 	legendary = super.callPackage ./pkgs/legendary {};
 	opentabletdriver = super.callPackage ./pkgs/opentabletdriver {};
+	opentabletdriver-git = super.callPackage ./pkgs/opentabletdriver-git {};
 }
