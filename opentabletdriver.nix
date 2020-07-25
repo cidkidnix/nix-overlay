@@ -29,8 +29,7 @@ in
    config = mkIf cfg.enable {
 	systemd.user = {
 	  services.opentabletdriver ={
-	     wants = [ "multi-user.target" ];
-	     after = [ "multi-user.target" ];
+	     restartIfChanged = true;
 	     serviceConfig = {
 		Type = "simple";
 		ExecStart = ''
