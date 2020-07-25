@@ -9,6 +9,7 @@ add
 let
     rev-overlay = "master";
     url-overlay = "https://github.com/cidkidnix/nix-overlay/archive/${rev-overlay}.tar.gz";
+    nix-overlay-modules = builtins.fetchTarball url-overlay;
     nix-overlay = (import (builtins.fetchTarball url-overlay));
 in
 ```
@@ -18,6 +19,12 @@ then add
 
 ```nix 
 {
+ imports = [
+    ...
+    "${nix-overlay-modules}/opentabletdriver.nix"
+  ];
+
+
  nixpkgs.overlays = [ (nix-overlay) ];
  environment.systemPackages = with pkgs; [ opentabletdriver ];
 }
